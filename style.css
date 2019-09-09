@@ -1,0 +1,52 @@
+ @font-face {
+     font-family: HarryPotter;
+     src: url('HARRP___.TTF');
+ }
+
+ html {
+     background: #000000;
+     font-family: HarryPotter, sans-serif;
+ }
+
+ .list {
+     border: 10px groove #FFC500;
+     display: grid;
+     justify-content: center;
+     background: #7F0909;
+     margin: 1em 1em;
+ }
+
+ .list h2 {
+     margin: auto;
+     height: auto;
+     padding: 1em 0.5em;
+     color: #FFC500;
+     font-weight: 100;
+ }
+
+ .list h2:hover {
+     color: #FFFFFF;
+ }
+
+ .list p:hover {
+     color: #FFFFFF;
+ }
+
+ .list p {
+     margin: auto;
+     padding: 1em 0;
+     text-align: center;
+     vertical-align: middle;
+     font-weight: 200;
+     color: #FFC500;
+ }
+
+ img {
+     max-width: 100%;
+ }
+
+ @media only screen and (min-width: 768px) {
+     .list {
+         grid-template-columns: 2fr 2fr;
+     }
+ }
