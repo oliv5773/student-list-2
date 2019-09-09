@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="da">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hogwarts students</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/hogwarts.svg" />
+      <h1>Hogwarts students of 1991</h1>
+    </header>
+    <main>
+      <div class="dropdown">
+        <select>
+          <option selected disabled>Sort by</option>
+          <option value="saab">First name</option>
+          <option value="opel">Last name</option>
+          <option value="audi">House</option>
+        </select>
 
-<body>
+        <select>
+          <option selected disabled>Filter by house</option>
+          <option>Show all houses</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Slytherin">Slytherin</option>
+        </select>
+      </div>
 
-    <ul>
-        <div class="list">
-        </div>
-    </ul>
-
+      <ul>
+        <div class="list"></div>
+      </ul>
+    </main>
 
     <script src="studentlist.js"></script>
-</body>
-
+  </body>
 </html>

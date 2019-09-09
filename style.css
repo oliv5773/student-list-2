@@ -1,52 +1,76 @@
- @font-face {
-     font-family: HarryPotter;
-     src: url('HARRP___.TTF');
- }
+@font-face {
+  font-family: HarryPotter;
+  src: url("HARRP___.TTF");
+}
 
- html {
-     background: #000000;
-     font-family: HarryPotter, sans-serif;
- }
+html {
+  background: #000000;
+  font-family: HarryPotter, sans-serif;
+}
 
- .list {
-     border: 10px groove #FFC500;
-     display: grid;
-     justify-content: center;
-     background: #7F0909;
-     margin: 1em 1em;
- }
+h1 {
+  color: white;
+  text-align: center;
+  padding-bottom: 1em;
+}
 
- .list h2 {
-     margin: auto;
-     height: auto;
-     padding: 1em 0.5em;
-     color: #FFC500;
-     font-weight: 100;
- }
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
 
- .list h2:hover {
-     color: #FFFFFF;
- }
+.dropdown {
+  text-align: center;
+}
 
- .list p:hover {
-     color: #FFFFFF;
- }
+select {
+  font-size: 1.5em;
+}
 
- .list p {
-     margin: auto;
-     padding: 1em 0;
-     text-align: center;
-     vertical-align: middle;
-     font-weight: 200;
-     color: #FFC500;
- }
+.list {
+  border: 10px groove #ffc500;
+  display: grid;
+  justify-content: center;
+  background: #7f0909;
+  margin: 1em 1em;
+}
 
- img {
-     max-width: 100%;
- }
+ul {
+  padding-left: 0;
+}
 
- @media only screen and (min-width: 768px) {
-     .list {
-         grid-template-columns: 2fr 2fr;
-     }
- }
+.list h2 {
+  margin: auto;
+  height: auto;
+  padding: 1em 0.5em;
+  color: #ffc500;
+  font-weight: 100;
+}
+
+.list h2:hover {
+  color: #ffffff;
+}
+
+.list p:hover {
+  color: #ffffff;
+}
+
+.list p {
+  margin: auto;
+  padding: 1em 0;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 200;
+  color: #ffc500;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .list {
+    grid-template-columns: 2fr 2fr;
+  }
+}
