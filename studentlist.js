@@ -81,4 +81,16 @@ function start() {
         }
     });
 
+    document.querySelectorAll("#filter-by").forEach(option => {
+        option.addEventListener("change", filterBy);
+    });
+}
+
+//This function is called during start():
+function filterBy() {
+    //It changes the variable "filter" to the given value from the HTML:
+    filter = this.value;
+
+    //Then it runs start() to refresh the student list once more:
+    start();
 }
