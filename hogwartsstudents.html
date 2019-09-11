@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="da">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hogwarts students</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <img src="img/hogwarts.svg" />
-      <h1>Hogwarts students of 1991</h1>
+        <img src="img/hogwarts.svg" />
+        <h1>Hogwarts students of 1991</h1>
     </header>
     <main>
-      <div class="dropdown">
-        <select>
-          <option selected disabled>Sort by</option>
-          <option value="saab">First name</option>
-          <option value="opel">Last name</option>
-          <option value="audi">House</option>
-        </select>
+        <div class="dropdown">
+            <select id="sort-by">
+                <option selected disabled>Sort by</option>
+                <option value="none">None</option>
+                <option value="First name">First name</option>
+                <option value="Last name">Last name</option>
+                <option value="House">House</option>
+            </select>
 
-        <select>
-          <option selected disabled>Filter by house</option>
-          <option>Show all houses</option>
-          <option value="Gryffindor">Gryffindor</option>
-          <option value="Hufflepuff">Hufflepuff</option>
-          <option value="Ravenclaw">Ravenclaw</option>
-          <option value="Slytherin">Slytherin</option>
-        </select>
-      </div>
+            <select id="filter-by">
+                <option selected disabled>Filter by house</option>
+                <option class="option" value="Alle">All Houses</option>
+                <option class="option" value="Hufflepuff">Hufflepuff</option>
+                <option class="option" value="Gryffindor">Gryffindor</option>
+                <option class="option" value="Ravenclaw">Ravenclaw</option>
+                <option class="option" value="Slytherin">Slytherin</option>
+            </select>
+        </div>
 
-      <ul>
-        <div class="list"></div>
-      </ul>
+        <ul>
+            <div class="list"></div>
+        </ul>
+
+        <div id="popup">
+
+            <div id="close">
+                <button>X</button>
+            </div>
+            <div id="content">
+            </div>
+        </div>
     </main>
 
     <script src="studentlist.js"></script>
-  </body>
+</body>
+
 </html>

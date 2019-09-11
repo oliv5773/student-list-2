@@ -1,76 +1,97 @@
 @font-face {
-  font-family: HarryPotter;
-  src: url("HARRP___.TTF");
+    font-family: HarryPotter;
+    src: url("HARRP___.TTF");
 }
 
 html {
-  background: #000000;
-  font-family: HarryPotter, sans-serif;
+    background: #000000;
+    font-family: HarryPotter, sans-serif;
 }
 
 h1 {
-  color: white;
-  text-align: center;
-  padding-bottom: 1em;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 header img {
-  display: block;
-  margin: 0 auto;
-  width: 30%;
+    display: block;
+    margin: 0 auto;
+    width: 30%;
 }
 
 .dropdown {
-  text-align: center;
+    text-align: center;
 }
 
 select {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
-.list {
-  border: 10px groove #ffc500;
-  display: grid;
-  justify-content: center;
-  background: #7f0909;
-  margin: 1em 1em;
+.studentos {
+    display: grid;
+    border: 10px groove #ffc500;
+    justify-content: center;
+    background: #7f0909;
+    margin: 1em 1em;
 }
+
 
 ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .list h2 {
-  margin: auto;
-  height: auto;
-  padding: 1em 0.5em;
-  color: #ffc500;
-  font-weight: 100;
-}
-
-.list h2:hover {
-  color: #ffffff;
-}
-
-.list p:hover {
-  color: #ffffff;
+    margin: auto;
+    height: auto;
+    padding: 1em 0.5em;
+    color: #ffc500;
+    font-weight: 100;
 }
 
 .list p {
-  margin: auto;
-  padding: 1em 0;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 200;
-  color: #ffc500;
+    margin: auto;
+    padding: 1em 0;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 200;
+    color: #ffc500;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+}
+
+#popup {
+    top: 0;
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#content .studentos {
+    background-color: blue;
+}
+
+#content h2,
+p {
+    margin: auto;
+    height: auto;
+    padding: 1em 0.5em;
+    color: #ffc500;
+    font-weight: 100;
+}
+
+
+.close {
+    position: fixed;
 }
 
 @media only screen and (min-width: 768px) {
-  .list {
-    grid-template-columns: 2fr 2fr;
-  }
+    .list {
+        grid-template-columns: 2fr 2fr;
+    }
 }

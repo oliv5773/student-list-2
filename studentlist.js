@@ -1,34 +1,84 @@
- "use strict";
+"use strict";
 
- let allStudents = [];
+document.addEventListener("DOMContentLoaded", getJson);
 
- //Get JSON-file in async function
- async function getJson() {
+//Empty array that will contain the JSON-data:
+let allStudents = [];
 
-     //Retrieving the data file
-     let jsonData = await fetch("http://petlatkea.dk/2019/students1991.json");
-     console.log(jsonData);
+//Variable that selects HTML-element(s) with the "list" class:
+let dest = document.querySelector(".list");
 
-     // The retrieved data is handled as JSON
-     allStudents = await jsonData.json();
-     console.log(allStudents);
+//Variable that will work as our filter:
+let filter = "all";
 
-     //Call function that shows data in DOM
-     start();
+//Function that retrieves the JSON-data:
+async function getJson() {
+    //Retrieving the data file
+    let jsonData = await fetch("http://petlatkea.dk/2019/students1991.json");
 
- }
+    // The retrieved data is handled as JSON:
+    allStudents = await jsonData.json();
 
- document.addEventListener("DOMContentLoaded", getJson);
+    //Call function that shows data in DOM:
+    start();
+}
 
- function start() {
-     let dest = document.querySelector(".list");
-     //Run through the list of students and insert data in a template
 
-     allStudents.forEach(student => {
-         //Place students in html
-         dest.innerHTML +=
-             `<div class="list">
-                 <h2>${student.fullname}</h2>
-<p>House: ${student.house}</p>`;
-     })
- }
+function start() {
+    dest.innerHTML = "";
+    allStudents.forEach(student => {
+
+        if (filter == "all" || filter == student.house) {
+            let template =
+                //Place students in html
+                `<div class="studentos">
+<h2>${student.fullname}</h2>
+<p>${student.house}</p>`;
+
+            dest.insertAdjacentHTML("beforeend", template);
+            dest.lastElementChild.addEventListener("click", () => {
+                showSingle(student);
+            });
+
+            function showSingle(student) {
+
+                document.querySelector("#content").innerHTML =
+                    `<div class = "studentos">
+                            <h2>${student.fullname}</h2>
+<p>${student.house}</p>
+</p>
+                            </div>`;
+                document.querySelector("#popup").style.display = "block";
+                document.querySelector("#popup #close").addEventListener("click", close);
+
+                let house = student.house;
+                if (house == "Gryffindor") {
+                    document.querySelector("#content .studentos").style.backgroundColor =
+                        "red";
+                }
+
+                if (house == "Hufflepuff") {
+                    document.querySelector("#content .studentos").style.backgroundColor =
+                        "pink";
+                }
+
+                if (house == "Ravenclaw") {
+                    document.querySelector("#content .studentos").style.backgroundColor =
+                        "blue";
+                }
+
+                if (house == "Slytherin") {
+                    document.querySelector("#content .studentos").style.backgroundColor =
+                        "green";
+                }
+            }
+
+
+
+            function close() {
+                document.querySelector("#popup").style.display = "none";
+            }
+        }
+    });
+
+}
