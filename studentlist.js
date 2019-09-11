@@ -68,6 +68,7 @@ function start() {
                             <h2>${student.fullname}</h2>
 <img class = "image" src ="img/${student.firstName}.jpg" alt = "${student.fullname}">
 <p>${student.house}</p>
+<img class = "crest" src ="img/${student.house}.png" alt = "${student.house}">
                             </div>`;
                 //... by making #popup in HTML visible (block):
                 document.querySelector("#popup").style.display = "block";

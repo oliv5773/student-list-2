@@ -80,17 +80,26 @@ img {
     margin: 0 auto;
     position: fixed;
     width: 80%;
-    height: 80%;
-    top: 10vh;
+    height: 90%;
+    top: 3vh;
     left: 9vw;
     overflow: hidden;
 }
 
 #content .studentos img {
-    width: 20%;
     display: block;
     margin: 0 auto;
+    max-height: 50%;
 }
+
+.image {
+    width: 20%;
+}
+
+.crest {
+    width: 10%;
+}
+
 
 #content .studentos h2,
 p {
