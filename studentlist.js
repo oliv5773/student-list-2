@@ -66,6 +66,7 @@ function start() {
                 document.querySelector("#content").innerHTML =
                     `<div class = "studentos">
                             <h2>${student.fullname}</h2>
+<img class = "image" src ="img/${student.firstName}.jpg" alt = "${student.fullname}">
 <p>${student.house}</p>
                             </div>`;
                 //... by making #popup in HTML visible (block):
