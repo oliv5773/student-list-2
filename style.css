@@ -4,7 +4,7 @@
 }
 
 html {
-    background: #000000;
+    background: darkgrey;
     font-family: HarryPotter, sans-serif;
 }
 
@@ -12,6 +12,7 @@ h1 {
     color: white;
     text-align: center;
     padding-bottom: 1em;
+    font-size: 3em;
 }
 
 header img {
@@ -29,16 +30,20 @@ select {
 }
 
 .studentos {
-    display: grid;
     border: 10px groove #ffc500;
     justify-content: center;
-    background: #7f0909;
+    background: black;
     margin: 1em 1em;
+    cursor: pointer;
 }
 
 
 ul {
     padding-left: 0;
+}
+
+.list {
+    display: grid;
 }
 
 .list h2 {
@@ -47,6 +52,8 @@ ul {
     padding: 1em 0.5em;
     color: #ffc500;
     font-weight: 100;
+    text-align: center;
+    font-size: 2em;
 }
 
 .list p {
@@ -56,6 +63,7 @@ ul {
     vertical-align: middle;
     font-weight: 200;
     color: #ffc500;
+    font-size: 1.5em;
 }
 
 img {
@@ -72,10 +80,6 @@ img {
     z-index: 100;
 }
 
-#content .studentos {
-    background-color: blue;
-}
-
 #content h2,
 p {
     margin: auto;
@@ -86,12 +90,24 @@ p {
 }
 
 
-.close {
+#close {
     position: fixed;
+}
+
+#close button {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
     .list {
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: auto auto;
+
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .list {
+        grid-template-columns: auto auto auto;
+
     }
 }

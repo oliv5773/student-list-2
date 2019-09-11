@@ -78,22 +78,46 @@ function start() {
                 let house = student.house;
                 if (house == "Gryffindor") {
                     document.querySelector("#content .studentos").style.backgroundColor =
-                        "red";
+                        "#7F0909";
+                    document.querySelector("#content .studentos h2").style.color =
+                        "#FFC500";
+                    document.querySelector("#content .studentos p").style.color =
+                        "#FFC500";
+                    document.querySelector("#content .studentos").style.cursor =
+                        "default";
                 }
 
                 if (house == "Hufflepuff") {
                     document.querySelector("#content .studentos").style.backgroundColor =
-                        "pink";
+                        "#EEE117";
+                    document.querySelector("#content .studentos h2").style.color =
+                        "#000000";
+                    document.querySelector("#content .studentos p").style.color =
+                        "#000000";
+                    document.querySelector("#content .studentos").style.cursor =
+                        "default";
                 }
 
                 if (house == "Ravenclaw") {
                     document.querySelector("#content .studentos").style.backgroundColor =
-                        "blue";
+                        "#000A90";
+                    document.querySelector("#content .studentos h2").style.color =
+                        "#946B2D";
+                    document.querySelector("#content .studentos p").style.color =
+                        "#946B2D";
+                    document.querySelector("#content .studentos").style.cursor =
+                        "default";
                 }
 
                 if (house == "Slytherin") {
                     document.querySelector("#content .studentos").style.backgroundColor =
-                        "green";
+                        "#0D6217";
+                    document.querySelector("#content .studentos h2").style.color =
+                        "#AAAAAA";
+                    document.querySelector("#content .studentos p").style.color =
+                        "#AAAAAA";
+                    document.querySelector("#content .studentos").style.cursor =
+                        "default";
                 }
             }
 
