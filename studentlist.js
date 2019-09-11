@@ -71,8 +71,8 @@ function start() {
                 //... by making #popup in HTML visible (block):
                 document.querySelector("#popup").style.display = "block";
 
-                //When you click the HTML-div "#close", it calls the "close" function:
-                document.querySelector("#popup #close").addEventListener("click", close);
+                //Click the popup to close it again:
+                document.querySelector("#content .studentos").addEventListener("click", close);
 
                 //A variable is created for a student's house - certain parameters are set according to which house the student belongs to:
                 let house = student.house;
@@ -83,8 +83,6 @@ function start() {
                         "#FFC500";
                     document.querySelector("#content .studentos p").style.color =
                         "#FFC500";
-                    document.querySelector("#content .studentos").style.cursor =
-                        "default";
                 }
 
                 if (house == "Hufflepuff") {
@@ -94,8 +92,6 @@ function start() {
                         "#000000";
                     document.querySelector("#content .studentos p").style.color =
                         "#000000";
-                    document.querySelector("#content .studentos").style.cursor =
-                        "default";
                 }
 
                 if (house == "Ravenclaw") {
@@ -105,8 +101,6 @@ function start() {
                         "#946B2D";
                     document.querySelector("#content .studentos p").style.color =
                         "#946B2D";
-                    document.querySelector("#content .studentos").style.cursor =
-                        "default";
                 }
 
                 if (house == "Slytherin") {
@@ -116,8 +110,6 @@ function start() {
                         "#AAAAAA";
                     document.querySelector("#content .studentos p").style.color =
                         "#AAAAAA";
-                    document.querySelector("#content .studentos").style.cursor =
-                        "default";
                 }
             }
 

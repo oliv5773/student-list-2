@@ -15,6 +15,17 @@ h1 {
     font-size: 3em;
 }
 
+h2 {
+    font-weight: 100;
+    font-size: 2em;
+}
+
+
+p {
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
 header img {
     display: block;
     margin: 0 auto;
@@ -31,7 +42,6 @@ select {
 
 .studentos {
     border: 10px groove #ffc500;
-    justify-content: center;
     background: black;
     margin: 1em 1em;
     cursor: pointer;
@@ -51,9 +61,7 @@ ul {
     height: auto;
     padding: 1em 0.5em;
     color: #ffc500;
-    font-weight: 100;
     text-align: center;
-    font-size: 2em;
 }
 
 .list p {
@@ -61,41 +69,30 @@ ul {
     padding: 1em 0;
     text-align: center;
     vertical-align: middle;
-    font-weight: 200;
     color: #ffc500;
-    font-size: 1.5em;
 }
 
 img {
     max-width: 100%;
 }
 
-#popup {
-    top: 0;
-    width: 80vw;
-    height: 100vh;
+#content .studentos {
+    margin: 0 auto;
     position: fixed;
-    display: none;
+    width: 80%;
+    height: 70%;
+    top: 14vh;
+    left: 9vw;
     overflow: hidden;
-    z-index: 100;
 }
 
-#content h2,
+#content .studentos h2,
 p {
     margin: auto;
     height: auto;
     padding: 1em 0.5em;
-    color: #ffc500;
     font-weight: 100;
-}
-
-
-#close {
-    position: fixed;
-}
-
-#close button {
-    cursor: pointer;
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
