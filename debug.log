@@ -1,0 +1,4 @@
+[1219/002351.829:ERROR:process_info.cc(329)] VirtualQueryEx: Adgang nægtet. (0x5)
+[1219/002351.831:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[1219/002351.831:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[1219/002351.831:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Der blev foretaget et forsøg på at få adgang til en eksisterende proces. (0xc000010a)

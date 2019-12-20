@@ -3,7 +3,13 @@
     src: url("HARRP___.TTF");
 }
 
-html {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background: darkgrey;
     font-family: HarryPotter, sans-serif;
 }
@@ -11,7 +17,7 @@ html {
 h1 {
     color: white;
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     font-size: 3em;
 }
 
@@ -32,6 +38,18 @@ header img {
     width: 30%;
 }
 
+.count, .house-count, .expel-count{display: flex;}
+
+.expel-count{
+    background: black;
+    border: 5px solid #ffc500;
+    cursor: pointer;
+}
+
+.expel-count:hover{
+    opacity: 0.5;
+}
+
 .dropdown {
     text-align: center;
 }
@@ -40,7 +58,8 @@ select {
     font-size: 1.5em;
 }
 
-.studentos {
+
+.student {
     border: 10px groove #ffc500;
     background: black;
     margin: 1em 1em;
@@ -73,10 +92,15 @@ ul {
 }
 
 img {
+    margin: 0 auto;
     max-width: 100%;
+    display: block;
 }
 
-#content .studentos {
+.content img{margin-top: 1em;
+margin-bottom: 1em;}
+
+.popup .content {
     margin: 0 auto;
     position: fixed;
     width: 80%;
@@ -84,9 +108,10 @@ img {
     top: 3vh;
     left: 9vw;
     overflow: hidden;
+    background: white;
 }
 
-#content .studentos img {
+.popup .content img {
     display: block;
     margin: 0 auto;
     max-height: 50%;
@@ -101,13 +126,27 @@ img {
 }
 
 
-#content .studentos h2,
+.popup .content h2, h3,
 p {
     margin: auto;
     height: auto;
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
     font-weight: 100;
     text-align: center;
+}
+
+.expelled-student{
+    background: red;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0.5em auto;
+}
+
+.expelled-student h2{text-align: center;
+margin-top: 0.5em;}
+
+.hide{
+    display: none;
 }
 
 @media only screen and (min-width: 768px) {
